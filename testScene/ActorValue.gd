@@ -46,11 +46,6 @@ var martial_arts
 var athletics
 var blood
 
-
-#this one is weird because we're doing math across time and space (read, from another scene).
-#We got a bunch of integers up there, but they only get their value from some script out in the boonies.
-#Look for "select[WHATEVER]" in the project.
-
 func set_params():#this function is also called from somewhere in hell, so enjoy that.
 	health
 	armorClass
@@ -86,11 +81,10 @@ func set_params():#this function is also called from somewhere in hell, so enjoy
 	if signature > 0:
 		skillID[signature -1] += 1
 		print (skillID)
-	
+
+		#TODO: this is not incrementing the variable correctly at runtime.
+
 	health = blood
-	#set_signature()
-	
-#func set_signature(): #proud of this one. Gets the signature'th element of the array and adds +1 when called.
 	
 		
 func _ready():
