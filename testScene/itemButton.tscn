@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2w8bamrrghsg"]
+
+[ext_resource type="Script" path="res://testScene/itemDrag.gd" id="1_rf4uj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfjcw"]
+size = Vector2(31, 32.0001)
+
+[node name="Button" type="Button"]
+anchors_preset = -1
+anchor_left = 0.007
+anchor_top = 0.259
+anchor_right = 0.007
+anchor_bottom = 0.259
+offset_left = 0.776
+offset_top = -8.288
+offset_right = 31.776
+offset_bottom = 23.712
+pivot_offset = Vector2(23, 24)
+action_mode = 0
+keep_pressed_outside = true
+script = ExtResource("1_rf4uj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(15.16, 16.456)
+scale = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(15.5, 16)
+shape = SubResource("RectangleShape2D_bfjcw")

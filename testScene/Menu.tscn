@@ -1,0 +1,203 @@
+[gd_scene load_steps=7 format=3 uid="uid://jgkyf24fqj6a"]
+
+[ext_resource type="Texture2D" uid="uid://0hnve8s8wexu" path="res://Asset/hero.png" id="1_becnj"]
+[ext_resource type="Script" path="res://testScene/selectHERO.gd" id="1_uxtra"]
+[ext_resource type="Texture2D" uid="uid://c0w2kx66qm16g" path="res://Asset/wizard.png" id="2_kif2t"]
+[ext_resource type="Script" path="res://testScene/selectWIZARD.gd" id="3_b4ild"]
+[ext_resource type="Texture2D" uid="uid://ce6sl5r7sg84m" path="res://Asset/warrior.png" id="3_m876w"]
+[ext_resource type="Script" path="res://testScene/selectWARRIOR.gd" id="5_6qu8k"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = 80.0
+offset_right = -128.0
+offset_bottom = -72.0
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.081
+anchor_right = 0.5
+anchor_bottom = 0.081
+offset_left = -160.0
+offset_top = -24.176
+offset_right = 160.0
+offset_bottom = 23.824
+theme_override_font_sizes/normal_font_size = 32
+text = "CHOOSE CHARACTER"
+
+[node name="HERO" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.214
+anchor_top = 0.613
+anchor_right = 0.214
+anchor_bottom = 0.613
+offset_left = -63.744
+offset_top = -128.048
+offset_right = 64.256
+offset_bottom = 127.952
+script = ExtResource("1_uxtra")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect/HERO"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 43.0
+offset_top = 76.0
+offset_right = 83.0
+offset_bottom = 116.0
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("1_becnj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ColorRect/HERO"]
+layout_mode = 0
+offset_left = 43.0
+offset_right = 139.0
+offset_bottom = 63.0
+scale = Vector2(0.500059, 0.511868)
+theme_override_font_sizes/normal_font_size = 32
+text = "HERO"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/ColorRect/HERO"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 128.0
+offset_right = 139.0
+offset_bottom = 224.0
+scale = Vector2(0.799102, 0.753127)
+text = "INT: 3
+SOC: 4
+AGI: 4
+STR: 6"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/ColorRect/HERO"]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 207.0
+offset_bottom = 290.0
+scale = Vector2(0.616882, 0.622207)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Signature:
+Martial Arts"
+
+[node name="WIZARD" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.613
+anchor_right = 0.5
+anchor_bottom = 0.613
+offset_left = -64.0
+offset_top = -128.048
+offset_right = 64.0
+offset_bottom = 127.952
+script = ExtResource("3_b4ild")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect/WIZARD"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 43.0
+offset_top = 76.0
+offset_right = 83.0
+offset_bottom = 116.0
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("2_kif2t")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ColorRect/WIZARD"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 63.0
+scale = Vector2(0.500059, 0.511868)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]WIZARD"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/ColorRect/WIZARD"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 128.0
+offset_right = 139.0
+offset_bottom = 224.0
+scale = Vector2(0.799102, 0.753127)
+text = "INT: 6
+SOC: 2
+AGI: 4
+STR: 2"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/ColorRect/WIZARD"]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 207.0
+offset_bottom = 290.0
+scale = Vector2(0.616882, 0.622207)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Signature:
+Apocrypha"
+
+[node name="WARRIOR" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.786
+anchor_top = 0.613
+anchor_right = 0.786
+anchor_bottom = 0.613
+offset_left = -64.256
+offset_top = -128.048
+offset_right = 63.744
+offset_bottom = 127.952
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_6qu8k")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect/WARRIOR"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 43.0
+offset_top = 76.0
+offset_right = 83.0
+offset_bottom = 116.0
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("3_m876w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ColorRect/WARRIOR"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 63.0
+scale = Vector2(0.500059, 0.511868)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]WARRIOR"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/ColorRect/WARRIOR"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 128.0
+offset_right = 139.0
+offset_bottom = 224.0
+scale = Vector2(0.799102, 0.753127)
+text = "INT: 2
+SOC: 2
+AGI: 5
+STR: 6"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/ColorRect/WARRIOR"]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 207.0
+offset_bottom = 290.0
+scale = Vector2(0.616882, 0.622207)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Signature:
+Brute Force"

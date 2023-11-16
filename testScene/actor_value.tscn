@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpm8bbt6e8cbe"]
+
+[ext_resource type="Script" path="res://testScene/ActorValue.gd" id="1_jkhwg"]
+
+[node name="ActorValue" type="Node2D"]
+position = Vector2(8, 8)
+script = ExtResource("1_jkhwg")
